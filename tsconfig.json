@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "types": [
+            "chrome"
+        ]
+    }
+    // },
+    // "exclude": [
+    //     "node_modules"
+    // ]
+}
