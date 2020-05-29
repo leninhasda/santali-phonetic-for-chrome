@@ -1,11 +1,11 @@
 # SantaliPhonetic Keyboard for Chrome
 
-SantaliPhonetic keyboard extensions adds support to write in Santali anywhere in the internet. It supports any chromium based browser that can download extension from chrome web store.
+SantaliPhonetic keyboard extensions adds support to write in Santali anywhere in the internet. It supports any chromium based browser that can download extensions from chrome web store.
 
 ### Usage
 1. Install from chrome web store
-2. Open a web page and hit `Ctrl+e` to start typing
-3. Hit `Ctrl+e` to disable again
+2. Open a web page and hit `CTRL+E` to start typing
+3. Hit `CTRL+E` to disable again
 
 ### Features
 - Works on any input field on any webpage
@@ -18,7 +18,7 @@ SantaliPhonetic keyboard extensions adds support to write in Santali anywhere in
 - [ ] Add support for `contenteditable` fields
 
 ## Development
-Just clone the repo to get started. There's a `Makefile` go give you some handy command. e.g. `make dep` to install dependency
+Just clone the repo to get started. There's a `Makefile` to give you some handy commands. e.g. `make dep` to install dependency
 
 #### requirements
 Make sure you have `node` and `npm` installed on your machine.
