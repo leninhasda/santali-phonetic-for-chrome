@@ -12,7 +12,7 @@ module.exports = {
         // style: './src/css/main.css'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'santali-phonetic'),
         filename: '[name].js'
         // filename: '[name].[hash:7].js'
     },
