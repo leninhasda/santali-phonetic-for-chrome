@@ -15,10 +15,10 @@ SantaliPhonetic keyboard extensions adds support to write in Santali anywhere in
 - Open sourced and completely free to use
 
 ## Road map
-- [ ] Add support for `contenteditable` fields
+Please visit the [Projects](https://github.com/users/leninhasda/projects/2/views/1) tab for this.
 
 ## Development
 Just clone the repo to get started. There's a `Makefile` to give you some handy commands. e.g. `make dep` to install dependency
 
 #### requirements
-Make sure you have `node` and `npm` installed on your machine.
+Make sure you have `node`, `npm` and `zip` installed on your machine.
