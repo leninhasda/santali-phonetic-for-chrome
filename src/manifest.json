@@ -16,7 +16,8 @@
     "page": "background.html"
   },
   "permissions": [
-    "<all_urls>"
+    "http://*/*",
+    "https://*/*"
   ],
   "content_scripts": [
     {
