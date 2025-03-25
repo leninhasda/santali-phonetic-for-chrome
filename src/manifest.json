@@ -1,11 +1,15 @@
 {
+  "manifest_version": 3,
   "name": "Santali Keyboard",
   "version": "1.0.1",
-  "manifest_version": 2,
   "description": "Santali phonetic keyboard",
   "author": "Lenin Hasda <leninhasda@gmail.com>",
+  "icons": {
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
   "page_action": {
-    "default_icon": "images/icon-48-dim.png",
+    "default_icon": "images/icon-128-dim.png",
     "default_title": "Santali Keyboard"
   },
   "background": {
@@ -14,9 +18,6 @@
   "permissions": [
     "<all_urls>"
   ],
-  "icons": {
-    "48": "images/icon-48.png"
-  },
   "content_scripts": [
     {
       "matches": [
