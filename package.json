@@ -1,25 +1,25 @@
 {
-    "name": "SantaliKeyboard",
-    "version": "1.0.1",
-    "description": "Santali Phonetic Keyboard as Chrome Extension",
-    "author": {
-        "name": "Lenin Hasda",
-        "email": "leninhasda@gmail.com",
-        "url": "https://leninhasda.me"
-    },
-    "scripts": {
-        "build": "./node_modules/.bin/webpack",
-        "watch": "./node_modules/.bin/webpack --watch"
-    },
-    "dependencies": {
-        "santali-parser": "github:leninhasda/santali-parser"
-    },
-    "devDependencies": {
-        "@types/chrome": "0.0.99",
-        "ts-loader": "^6.2.2",
-        "typescript": "^3.9.10",
-        "webpack": "^5.98.0",
-        "webpack-cli": "^6.0.1"
-    },
-    "license": "MIT"
+  "name": "SantaliKeyboard",
+  "version": "1.0.1",
+  "description": "Santali Phonetic Keyboard as Chrome Extension",
+  "author": {
+    "name": "Lenin Hasda",
+    "email": "leninhasda@gmail.com",
+    "url": "https://leninhasda.me"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch"
+  },
+  "dependencies": {
+    "santali-parser": "github:leninhasda/santali-parser"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.99",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.9.10",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "license": "MIT"
 }
