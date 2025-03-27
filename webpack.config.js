@@ -1,11 +1,10 @@
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-
 module.exports = {
-    // mode: "development",
     mode: "production",
     entry: {
         content: "./src/js/content.ts",
@@ -53,6 +52,19 @@ module.exports = {
             //         "css-loader"
             //     ]
             // }
+        ],
+    },
+
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: process.env.NODE_ENV ? true : false,
+                    },
+                },
+            }),
         ],
     },
     // optimization: {
