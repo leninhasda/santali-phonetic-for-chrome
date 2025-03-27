@@ -2,30 +2,31 @@ import SantaliParser from 'santali-parser'
 
 var parser = new SantaliParser();
 var isOn = false;
-// const KEY_E = 69;
 const KEY_S = 'S';
 const KEY_SPACE = 'Space';
 const KEY_ENTER = 'Enter';
 
-// trigger phonetic parser
+// switching keyboard
 window.addEventListener('keyup', (e: KeyboardEvent) => {
-    console.log('keycode', e.key, e.code)
+    console.log('keycode pressed are', e.key, e.code)
     if (e.ctrlKey && e.shiftKey && e.key == KEY_S) {
         isOn = !isOn
-        console.log('switching keyboard to:', isOn)
+        console.log('keyboard switching to santali:', isOn)
         chrome.runtime.sendMessage({ isOn: isOn })
     }
 })
 
+// handling key press event
 var keyupEventHandler = ($element: HTMLTextAreaElement | HTMLInputElement, e: KeyboardEvent) => {
     console.log('event handler invoked')
     if (!isOn ||
         (e.code != KEY_SPACE && e.code != KEY_ENTER)) {
-        console.log('returning', isOn, e.code)
+        console.log('nothing to handle because', isOn, e.code)
         return
     }
 
-    console.log("invoking santali parser")
+    console.log("santali parser is on. parsing...")
+
     // get current word
     var caretStart = $element.selectionStart;
     var front = ($element.value).substring(0, caretStart)
@@ -41,12 +42,13 @@ var keyupEventHandler = ($element: HTMLTextAreaElement | HTMLInputElement, e: Ke
     if (front.length > 0 && front.charAt(front.length - 1) != " ")
         frontSpace = " "
 
-    console.log("current word", currentWord)
+    console.log("found current word", currentWord)
 
     // parse the word
     let parsedWord = parser.parse(currentWord)
+    console.log("parsed word", parsedWord)
     if (currentWord == parsedWord) {
-        console.log("current word same as parsed word")
+        console.log("skipping as current word is same as parsed word")
         return
     }
 
