@@ -1,14 +1,13 @@
 let iconPath = 'images/icon-128.png';
 let iconDimPath = 'images/icon-128-dim.png';
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    // console.log(request)
+chrome.runtime.onMessage.addListener((request, sender) => {
+    console.log(request)
     if (request.isOn) {
-        console.log('on')
-        chrome.pageAction.setIcon({ tabId: sender.tab.id, path: iconPath });
+        console.log('on');
+        chrome.action.setIcon({ tabId: sender.tab.id, path: iconPath });
     } else {
-        chrome.pageAction.setIcon({ tabId: sender.tab.id, path: iconDimPath });
+        console.log('off');
+        chrome.action.setIcon({ tabId: sender.tab.id, path: iconDimPath });
     }
-    chrome.pageAction.show(sender.tab.id);
-    // sendResponse({})
 });

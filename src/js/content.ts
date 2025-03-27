@@ -12,11 +12,10 @@ window.addEventListener('keyup', (e: KeyboardEvent) => {
     console.log('keycode', e.key, e.code)
     if (e.ctrlKey && e.shiftKey && e.key == KEY_S) {
         isOn = !isOn
+        console.log('switching keyboard to:', isOn)
         chrome.runtime.sendMessage({ isOn: isOn })
     }
 })
-
-
 
 var keyupEventHandler = ($element: HTMLTextAreaElement | HTMLInputElement, e: KeyboardEvent) => {
     console.log('event handler invoked')

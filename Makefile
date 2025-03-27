@@ -15,7 +15,6 @@ build: clean
 	@@echo "Making clean build..."
 	@@npm run build
 	@@mkdir -p santali-phonetic
-	@@cp ./src/background.html ./${DEST_DIR}
 	@@cp ./src/options.html ./${DEST_DIR}
 	@@cp ./src/manifest.json ./${DEST_DIR}
 	@@cp -R ./src/images ./${DEST_DIR}
