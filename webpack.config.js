@@ -1,23 +1,25 @@
-const path = require('path');
+const path = require("path");
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
+    // mode: "development",
+    mode: "production",
     entry: {
-        content: './src/js/content.ts',
-        background: './src/js/background.ts',
+        content: "./src/js/content.ts",
+        background: "./src/js/background.ts",
         // manifest: './src/manifest.json'
         // style: './src/css/main.css'
     },
     output: {
-        path: path.resolve(__dirname, 'santali-phonetic'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, "santali-phonetic"),
+        filename: "[name].js",
         // filename: '[name].[hash:7].js'
     },
     resolve: {
-        extensions: ['.ts', '.json', '.css', '.ttf']
+        extensions: [".ts", ".json", ".css", ".ttf"],
     },
     module: {
         rules: [
@@ -34,9 +36,9 @@ module.exports = {
             // },
             {
                 test: /\.ts$/,
-                loader: 'ts-loader',
-                options: { allowTsInNodeModules: true }
-            }
+                loader: "ts-loader",
+                options: { allowTsInNodeModules: true },
+            },
             // {
             //     test: /\.css$/,
             //     use: [
@@ -51,8 +53,8 @@ module.exports = {
             //         "css-loader"
             //     ]
             // }
-        ]
-    }
+        ],
+    },
     // optimization: {
     //     minimizer: [
     //         new UglifyJsPlugin(),

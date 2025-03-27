@@ -11,7 +11,7 @@
   "action": {
     "default_title": "Santali Keyboard",
     "default_icon": {
-      "48": "images/icon-48.png",
+      "48": "images/icon-48-dim.png",
       "128": "images/icon-128-dim.png"
     }
   },
@@ -19,9 +19,9 @@
     "service_worker": "background.js",
     "type": "module"
   },
-  "permissions": [
-    "http://*/*",
-    "https://*/*"
+  "permissions": [],
+  "host_permissions": [
+    "*://*/*"
   ],
   "content_scripts": [
     {
